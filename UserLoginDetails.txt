@@ -1,0 +1,17 @@
+USE [MovieReview]
+GO
+
+/****** Object:  Table [dbo].[UserLogin]    Script Date: 5/3/2021 7:38:41 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UserLogin](
+	[username] [varchar](50) NULL,
+	[password] [nchar](10) NULL
+) ON [PRIMARY]
+GO
+
+

@@ -1,0 +1,20 @@
+USE [MovieReview]
+GO
+
+/****** Object:  Table [dbo].[UserReview]    Script Date: 5/3/2021 7:39:21 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UserReview](
+	[MovieIdReviewId] [int] IDENTITY(1,1) NOT NULL,
+	[MovieName] [varchar](50) NULL,
+	[MovieReview] [varchar](50) NULL,
+	[MovieRating] [int] NULL,
+	[Username] [varchar](100) NULL
+) ON [PRIMARY]
+GO
+
+
