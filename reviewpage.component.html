@@ -1,0 +1,168 @@
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Movie Review <small>Better Your Choice </small></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6 text-center">
+                        <h1 class="rating-num">
+                            4.0</h1>
+                        <div class="rating">
+                            <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                            </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                            </span><span class="glyphicon glyphicon-star-empty"></span>
+                        </div>
+                        <div>
+                            <span class="glyphicon glyphicon-user"></span>1,050,008 total
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                        <div class="row rating-desc">
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>5
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 5 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>4
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 4 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>3
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 3 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>2
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 2 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                <span class="glyphicon glyphicon-star"></span>1
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                        <span class="sr-only">15%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 1 -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form #userreview="ngForm" (ngSubmit)="onSubmit(userreview.value)">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="yourname.invalid && yourname.touched ">
+                            <label for="name">
+                               You  Name:<span style="color: red;">*</span></label>
+                            <input type="text"  #yourname="ngModel" class="form-control" id="Username" name="Username" placeholder="Enter name" required="required" [(ngModel)]="UserReview.Username" />
+                        </div>
+                        <div class="form-group" [class.has-error]="rate.invalid && rate.touched ">
+                            <label for="text">
+                                Movie Rating:<span style="color: red;">*</span></label>
+                            <div class="input-group">
+                                <input type="text"#rate="ngModel" class="form-control" id="MovieRating" name="MovieRating" placeholder="Enter Rating" required="required" [(ngModel)]="UserReview.MovieRating"/></div>
+                        </div>
+                        <div class="form-group" [class.has-error]="movie.invalid && movie.touched ">
+                            <label for="subject">
+                                 Your Movie<span style="color: red;">*</span></label>
+                            <select id="MovieName" #movie="ngModel" name="MovieName" class="form-control" required="required" [(ngModel)]="UserReview.MovieName">
+                                <option value="na" selected="">Select Movie:</option>
+                                <option value="30 Days Love">30 Days Love</option>
+                                <option value="Alludu Adurs">Alludu Adurs</option>
+                                <option value="Aranya">Aranya</option>
+                                <option value="Darbar">Darbar</option>
+                                <option value="GaaliSampath">GaaliSampath</option>
+                                <option value="Love-Story">Love-Story</option>
+                                <option value="Master">Master</option>
+                                <option value="Red">Red</option>
+                                <option value="Shashi">Shashi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" [class.has-error]="feedback.invalid && feedback.touched ">
+                            <label for="name">
+                                Movie Review<span style="color: red;">*</span></label>
+                            <textarea name="MovieReview" #feedback="ngModel" id="MovieReview" class="form-control" rows="9" cols="25" required="required" [(ngModel)]="UserReview.MovieReview"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-dark pull-right" id="btnContactUs">
+                            Send</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>MovieReview, Inc.</strong><br>
+                IT Area Compus, Suite 600<br>
+                Hyderabad,Bengaluru CA 14625<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (123) 456-7890-9087
+            </address>
+            <address>
+                <strong>Full Name</strong><br>
+                <a href="">MovieReview@example.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>

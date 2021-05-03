@@ -1,0 +1,54 @@
+<!-- <form  >
+    <table>
+        <tr>
+    <td><input type="text" required placeholder="Username" name="username" id="username" [(ngModel)]="data1.UserName"></td>
+</tr>
+<tr>
+    <td><input type="password" required placeholder="Password" name="password"id="password" [(ngModel)]="data1.Password"></td>
+</tr>
+<tr>
+    <td><input type="password" required placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" [(ngModel)]="data1.ConfirmPassword"></td>
+</tr>
+<tr>
+    <td><input type="email" required placeholder="Email" name="email" id="email" [(ngModel)]="data1.Email"></td>
+</tr>
+<tr>
+    <td><button type="submit">Sign In</button></td>
+</tr>
+</table>
+</form> -->
+
+
+
+<div class="sidenav">
+    <div class="login-main-text">
+       <h2>MovieReview <br> Register Here!. </h2>
+       <p> register from here to access.</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form #userform="ngForm" (ngSubmit)="onSubmit(userform.value)" role="form">
+             <div class="form-group has-error" [class.has-error]="firstname.invalid && firstname.touched ">
+                <label>User Name<span style="color: red;">*</span></label>
+                <input type="text" #firstname="ngModel" class="form-control" placeholder="User Name" required name="username" id="username" [(ngModel)]="data1.UserName" autofocus>
+             </div>
+             <div class="form-group has-error" [class.has-error]="password.invalid && password.touched ">
+                <label>Password<span style="color: red;">*</span></label>
+                <input type="password" #password="ngModel" class="form-control" placeholder="Password" required name="password"id="password" [(ngModel)]="data1.Password">
+             </div>
+             <div class="form-group has-error" [class.has-error]="cpassword.invalid && cpassword.touched ">
+                <label>Confirm Password<span style="color: red;">*</span></label>
+                <input type="password" #cpassword="ngModel" class="form-control" placeholder="Confirm Password" required name="confirmpassword" id="confirmpassword" [(ngModel)]="data1.ConfirmPassword">
+             </div>
+             <div class="form-group has-error" [class.has-error]="email.invalid && email.touched ">
+                <label>Email<span style="color: red;">*</span></label>
+                <input type="email"  #email="ngModel" class="form-control" placeholder="Email" required name="email" id="email" [(ngModel)]="data1.Email" pattern="^([\w-.]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!mail\.com)(?!live\.com)(?!aol\.com)(?!outlook\.com)(?!bol\.com)(?!msn\.com)(?!ymail\.com)([\w-]+.)+[\w-]{2,4})?$" >
+             </div>
+             <button type="submit" class="btn btn-secondary">Register Here!</button>
+          </form>
+          
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,25 @@
+<div class="sidenav">
+    <div class="login-main-text">
+       <h2>Movie Review Rating<br> Login Page</h2>
+       <p>Login or register from here to access.</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form #loginform="ngForm" (ngSubmit)="onSubmit(loginform.value)">
+             <div class="form-group" [class.has-error]="username.invalid && username.touched ">
+                <label>User Name<span style="color: red;">*</span></label>
+                <input type="text" #username="ngModel"class="form-control" placeholder="User Name" required [(ngModel)]="UserLoginData.username" name="username" id="username">
+             </div>
+             <div class="form-group" [class.has-error]="password.invalid && password.touched ">
+                <label>Password<span style="color: red;">*</span></label>
+                <input type="password" #password="ngModel" class="form-control" placeholder="Password" required [(ngModel)]="UserLoginData.password" name="password" id="password">
+             </div>
+             <button type="submit" class="btn btn-black">Login</button>
+             <button type="submit" class="btn btn-secondary" (click)="Register()">Register</button>
+          </form>
+       </div>
+    </div>
+ </div>
+ <!-- <app-home [uname]="uname"></app-home> -->
